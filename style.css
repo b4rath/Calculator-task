@@ -1,0 +1,93 @@
+/* Style the container for the calculator */
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+/* Style the card element */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the card header element */
+.card-header {
+  background-color: #393939;
+  padding: 10px;
+}
+
+/* Style the card title element */
+.card-title {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Style the card body element */
+.card-body {
+  background-color:azure;
+  padding: 20px;
+}
+
+/* Style the form group element */
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+
+
+/* Style the input element */
+input[type="text"] {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Style the button element */
+button {
+  width: 23%;
+  height: 50px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Style the secondary button element */
+.btn-secondary {
+  background-color: #071f43;
+  color: #fff;
+}
+
+/* Style the primary button element */
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Style the success button element */
+.btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Style the button element when hovered */
+button:hover {
+  opacity: 0.8;
+}
+
+.btn-secondary:hover{
+  background-color: #051731d9;
+}
