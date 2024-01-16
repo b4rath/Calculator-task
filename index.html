@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator DOM</title>
+    <!-- Import Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Import Math.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"></script>
+    <!-- Import jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Import custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 id="title">Calculator Task</h1>
+                        <p id="description">Create a Calculator using DOM</p>
+                    </div>
+                    <div class="table-responsive">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="result" disabled>
+                            </div>
+                            <div class="form-group">
+                                <button id="clear" type="button" class="btn btn-secondary" onclick="clearResult()">C</button>
+                                <button type="button" class="btn btn-secondary" onclick="backspace()">CE</button>
+                                <button id="add" type="button" class="btn btn-secondary" onclick="insert('+')">+</button>
+                                <button id="subtract" type="button" class="btn btn-secondary" onclick="insert('-')">-</button>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-secondary" onclick="insert('*')">*</button>
+                                <button type="button" class="btn btn-secondary" onclick="insert('/')">/</button>
+                                <button type="button" class="btn btn-secondary" onclick="insert('%')">%</button>
+                                <button id="equal" type="button" class="btn btn-primary" onclick="calculate()">=</button>
+                            </div>
+                            <div class="form-group">
+                                <button id="7" type="button" class="btn btn-secondary" onclick="insert('7')">7</button>
+                                <button id="8" type="button" class="btn btn-secondary" onclick="insert('8')">8</button>
+                                <button id="9" type="button" class="btn btn-secondary" onclick="insert('9')">9</button>
+                            </div>
+                            <div class="form-group">
+                                <button id="4" type="button" class="btn btn-secondary" onclick="insert('4')">4</button>
+                                <button id="5" type="button" class="btn btn-secondary" onclick="insert('5')">5</button>
+                                <button id="6" type="button" class="btn btn-secondary" onclick="insert('6')">6</button>
+                            </div>
+                            <div class="form-group">
+                                <button id="1" type="button" class="btn btn-secondary" onclick="insert('1')">1</button>
+                                <button id="2" type="button" class="btn btn-secondary" onclick="insert('2')">2</button>
+                                <button id="3" type="button" class="btn btn-secondary" onclick="insert('3')">3</button>
+                            </div>
+                            <div class="form-group">
+                                <button id="0" type="button" class="btn btn-secondary" onclick="insert('0')">0</button>
+                                <button type="button" class="btn btn-secondary" onclick="insert('.')">.</button>
+                                <button type="button" class="btn btn-secondary" onclick="insert('(')">(</button>
+                                <button type="button" class="btn btn-secondary" onclick="insert(')')">)</button>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-success" onclick="memoryAdd()">M+</button>
+                                <button type="button" class="btn btn-success" onclick="memorySubtract()">M-</button>
+                                <button type="button" class="btn btn-success" onclick="memoryClear()">MC</button>
+                                <button type="button" class="btn btn-success" onclick="memoryRecall()">MR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- hidden input element to store the memory value -->
+<input type="hidden" id="memory" value="0">
+<script type="text/javascript" src="script.js"></script>
+<script>
+// add an event listener for the keydown event on the document object
+document.addEventListener("keydown", function(event) {
+  // check if the key pressed is the Enter key
+  if (event.key === "Enter") {
+    // call the calculate() function
+    calculate();
+  }
+});
+</script>
+</body>
+</html>
